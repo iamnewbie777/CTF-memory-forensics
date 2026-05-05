@@ -2,21 +2,16 @@
 
 | Category | Tool | Platform | Why It’s Useful |
 |----------|------|----------|-----------------|
-| **Disk/Filesystem Imaging** | `dd` | Linux/Windows (via Cygwin) | Simple, bit‑for‑bit 
-copy; can limit size (`bs=4M`). |
+| **Disk/Filesystem Imaging** | `dd` | Linux/Windows (via Cygwin) | Simple, bit‑for‑bit copy; can limit size (`bs=4M`). |
 | | `FTK Imager` | Windows | GUI, can create raw images, verify hashes. |
 | **Memory Dump** | `LiME` (Linux) | Linux | Kernel module for live memory capture. |
 | | `Volatility 3` | Cross‑platform | Analyzes dumps; also can generate lightweight dumps. |
-| **Log Parsing** | `plaso` (`log2timeline`) | Cross‑platform | Generates unified timeline 
-from many sources. |
+| **Log Parsing** | `plaso` (`log2timeline`) | Cross‑platform | Generates unified timeline from many sources. |
 | **Network Capture** | `tcpdump` | Linux/macOS | Powerful, filter‑able packet capture. |
 | | `Wireshark` | Cross‑platform | GUI for deep packet inspection. |
-| **Hashing** | `sha256sum` / `CertUtil` | Linux/Windows | Fast, widely accepted hash 
-algorithm. |
-| **Remote Collection** | `ssh` with `-w` (port forwarding) | Linux/Windows (WSL) | Allows 
-running capture tools on the target without direct access. |
-| **Immutable Storage** | Cloud object lock (S3, Azure Blob) | Cloud | Guarantees 
-write‑once, read‑many compliance. |
+| **Hashing** | `sha256sum` / `CertUtil` | Linux/Windows | Fast, widely accepted hash algorithm. |
+| **Remote Collection** | `ssh` with `-w` (port forwarding) | Linux/Windows (WSL) | Allows running capture tools on the target without direct access. |
+| **Immutable Storage** | Cloud object lock (S3, Azure Blob) | Cloud | Guarantees write‑once, read‑many compliance. |
 
 ### General Tips  
 
