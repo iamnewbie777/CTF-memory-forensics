@@ -14,8 +14,7 @@ may run only a minimal Linux distribution (e.g., Alpine, Ubuntu minimal).
 
 | Step | Action | Command / Tool | Notes |
 |------|--------|----------------|-------|
-| **2.1** | **Collect system logs** | `journalctl --since "1 hour ago" > /tmp/ir_workspace/journal.log` (Linux) <br> `wevtutil qe System /f:text /c 1000 > /tmp/ir_workspace/wevt.log` (Windows) | Keep only the most recent relevant entries to stay 
-within storage limits. |
+| **2.1** | **Collect system logs** | `journalctl --since "1 hour ago" > /tmp/ir_workspace/journal.log` (Linux) <br> `wevtutil qe System /f:text /c 1000 > /tmp/ir_workspace/wevt.log` (Windows) | Keep only the most recent relevant entries to stay within storage limits. |
 | **2.2** | **Capture active processes** | `ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu > /tmp/ir_workspace/processes.txt` | Focus on high‑CPU or unknown processes. |
 | **2.3** | **Dump memory (lightweight)** | **Linux:** `sudo dd if=/dev/mem of=/tmp/ir_workspace/memory.dump bs=1M count=512` (captures first 512 MiB) <br> **Windows:** 
 `procdump -ma -s 500 -n 5 <pid> C:\temp\mem_500.exe` (captures up to 500 MiB) | If memory is too scarce, consider ** Volatility 3’s `linux.dump`** or **`winpmem`** with limited size. |
